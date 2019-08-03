@@ -1,0 +1,8 @@
+prefix=/home/prasant/newarm/devel
+
+Name: arm_final
+Description: Description of arm_final
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/prasant/newarm/devel/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/prasant/newarm/install
+
+Name: device_interface
+Description: Description of device_interface
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/prasant/newarm/install/lib 
+Requires: 

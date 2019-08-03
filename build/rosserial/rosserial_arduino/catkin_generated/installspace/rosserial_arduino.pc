@@ -1,0 +1,8 @@
+prefix=/home/prasant/newarm/install
+
+Name: rosserial_arduino
+Description: Description of rosserial_arduino
+Version: 0.7.7
+Cflags: -I/home/prasant/newarm/install/include
+Libs: -L/home/prasant/newarm/install/lib 
+Requires: message_runtime

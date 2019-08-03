@@ -1,0 +1,8 @@
+prefix=/home/prasant/newarm/devel
+
+Name: arm_final_moveit_config
+Description: Description of arm_final_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/prasant/newarm/devel/lib 
+Requires: 

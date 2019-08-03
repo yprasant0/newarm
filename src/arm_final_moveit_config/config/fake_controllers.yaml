@@ -1,0 +1,9 @@
+controller_list:
+  - name: fake_arm_final_controller
+    joints:
+      - j_dof_1
+      - j_dof_2
+      - j_dof_3
+      - j_dof_4
+      - j_dof_5
+      - j_dof_6

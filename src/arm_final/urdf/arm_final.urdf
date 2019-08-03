@@ -1,0 +1,386 @@
+<robot
+  name="arm_final">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-4.8919202022546E-16 -1.53002610581154E-15 0.0316685581856065"
+        rpy="0 0 0" />
+      <mass
+        value="0.298004525740919" />
+      <inertia
+        ixx="0.000216487162040143"
+        ixy="2.14511093892152E-19"
+        ixz="6.62379764752863E-19"
+        iyy="0.000216487162040143"
+        iyz="-1.90836523016394E-18"
+        izz="0.000273202741484089" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="dof_1">
+    <inertial>
+      <origin
+        xyz="0.0244999196045124 0.0266781560710179 -0.0274078608809557"
+        rpy="0 0 0" />
+      <mass
+        value="0.184566420416876" />
+      <inertia
+        ixx="0.000642874909767405"
+        ixy="-5.78743454260767E-05"
+        ixz="1.01840204362613E-06"
+        iyy="0.000483827075446106"
+        iyz="2.13199542065923E-06"
+        izz="0.000380120979154723" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/dof_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/dof_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_dof_1"
+    type="continuous">
+    <origin
+      xyz="-0.0435 -0.027 0.10603"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="dof_1" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="dof_2">
+    <inertial>
+      <origin
+        xyz="0.169248177197148 0.00468167779047434 0.166953007051929"
+        rpy="0 0 0" />
+      <mass
+        value="0.457478533761127" />
+      <inertia
+        ixx="0.00460376442673189"
+        ixy="-1.98205709657506E-19"
+        ixz="-0.00466753134808732"
+        iyy="0.00945287913258603"
+        iyz="-1.59919820441612E-18"
+        izz="0.00494585962599626" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/dof_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/dof_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_dof_2"
+    type="revolute">
+    <origin
+      xyz="-0.029471 0.0035 -0.021818"
+      rpy="-1.5708 -1.5103E-14 1.5708" />
+    <parent
+      link="dof_1" />
+    <child
+      link="dof_2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.34"
+      upper="1.3"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="dof_3">
+    <inertial>
+      <origin
+        xyz="0.156732267290883 0.0250916520294329 -0.150336651462648"
+        rpy="0 0 0" />
+      <mass
+        value="0.519004826088558" />
+      <inertia
+        ixx="0.00349626515568729"
+        ixy="-0.000749497325149855"
+        ixz="0.00304089129286526"
+        iyy="0.00643696142998314"
+        iyz="0.000631377049987083"
+        izz="0.00382311214222597" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/dof_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/dof_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_dof_3"
+    type="revolute">
+    <origin
+      xyz="0.35124 0 0.31344"
+      rpy="-3.4694E-18 -1.3878E-17 1.2143E-17" />
+    <parent
+      link="dof_2" />
+    <child
+      link="dof_3" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.75"
+      upper="1.13"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="dof_4">
+    <inertial>
+      <origin
+        xyz="0.0704384576587642 -0.0119497807017928 -0.0704565954495338"
+        rpy="0 0 0" />
+      <mass
+        value="0.214734243860134" />
+      <inertia
+        ixx="0.000224163723514465"
+        ixy="3.94569148630422E-05"
+        ixz="7.36506705649978E-05"
+        iyy="0.000243644832516678"
+        iyz="-3.94981523185265E-05"
+        izz="0.000224085439121708" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/dof_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/dof_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_dof_4"
+    type="revolute">
+    <origin
+      xyz="0.22524 0.060682 -0.25352"
+      rpy="-3.4694E-18 -1.3878E-17 1.2143E-17" />
+    <parent
+      link="dof_3" />
+    <child
+      link="dof_4" />
+    <axis
+      xyz="-0.70711 0 0.70711" />
+    <limit
+      lower="-1.57"
+      upper="2.3"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="dof_5">
+    <inertial>
+      <origin
+        xyz="0.0648233009354049 -0.0492553742798068 -0.0648368742596185"
+        rpy="0 0 0" />
+      <mass
+        value="0.286949151467163" />
+      <inertia
+        ixx="0.000612123465719283"
+        ixy="-0.000157903243673435"
+        ixz="0.000173114616600611"
+        iyy="0.000578013092781289"
+        iyz="0.000157997620916116"
+        izz="0.000611994831664837" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/dof_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/dof_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_dof_5"
+    type="revolute">
+    <origin
+      xyz="0.097485 0 -0.097485"
+      rpy="-3.4694E-18 -1.3878E-17 1.2143E-17" />
+    <parent
+      link="dof_4" />
+    <child
+      link="dof_5" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="dof_6">
+    <inertial>
+      <origin
+        xyz="0.133615661096911 4.02455846426619E-15 -0.0368420116719946"
+        rpy="0 0 0" />
+      <mass
+        value="0.119536504591507" />
+      <inertia
+        ixx="0.000196101200035635"
+        ixy="-1.04036821746509E-18"
+        ixz="0.000111858189445449"
+        iyy="0.000470580806244086"
+        iyz="2.27851862811407E-19"
+        izz="0.000438421157653592" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/dof_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_final/meshes/dof_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_dof_6"
+    type="revolute">
+    <origin
+      xyz="0.057446 -0.001 -0.057446"
+      rpy="-3.4694E-18 -1.3878E-17 1.2143E-17" />
+    <parent
+      link="dof_5" />
+    <child
+      link="dof_6" />
+    <axis
+      xyz="-0.70711 0 0.70711" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
